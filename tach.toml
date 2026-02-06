@@ -1,0 +1,258 @@
+respect_gitignore = "if_git_repo"
+
+exclude = [
+  "subprojects",
+  "tools",
+  "**/tests",
+]
+
+[[modules]]
+path = "musique"
+depends_on = ["musique._lib"]
+
+[[modules]]
+path = "musique._external"
+depends_on = ["musique._lib"]
+
+[[modules]]
+path = "musique._lib"
+depends_on = ["musique", "musique._external"]
+
+[[modules]]
+path = "musique.cluster"
+depends_on = ["musique._lib", "musique.cluster.hierarchy", "musique.cluster.vq"]
+
+[[modules]]
+path = "musique.cluster.hierarchy"
+depends_on = ["musique._lib", "musique.spatial.distance", "musique._external"]
+
+[[modules]]
+path = "musique.cluster.vq"
+depends_on = ["musique._lib", "musique.spatial.distance", "musique._external"]
+
+[[modules]]
+path = "musique.constants"
+depends_on = ["musique._lib"]
+
+[[modules]]
+path = "musique.datasets"
+depends_on = ["musique._lib"]
+
+[[modules]]
+path = "musique.differentiate"
+depends_on = ["musique._lib", "musique._external"]
+
+[[modules]]
+path = "musique.fft"
+depends_on = ["musique._lib", "musique.special"]
+
+[[modules]]
+path = "musique.fftpack"
+depends_on = ["musique._lib", "musique.fft"]
+
+[[modules]]
+path = "musique.integrate"
+depends_on = ["musique._lib", "musique.interpolate", "musique.linalg", "musique.optimize", "musique.sparse", "musique.sparse.linalg", "musique.special", "musique.stats", "musique._external"]
+
+[[modules]]
+path = "musique.interpolate"
+depends_on = ["musique", "musique._lib", "musique.linalg", "musique.linalg.lapack", "musique.optimize", "musique.sparse", "musique.sparse.linalg", "musique.spatial", "musique.spatial.distance", "musique.special", "musique._external"]
+
+[[modules]]
+path = "musique.io"
+depends_on = ["musique._lib", "musique.io.arff", "musique.io.matlab", "musique.io.wavfile", "musique.sparse"]
+
+[[modules]]
+path = "musique.io.arff"
+depends_on = ["musique._lib"]
+
+[[modules]]
+path = "musique.io.matlab"
+depends_on = ["musique._lib", "musique.sparse"]
+
+[[modules]]
+path = "musique.io.wavfile"
+depends_on = []
+
+[[modules]]
+path = "musique.linalg"
+depends_on = ["musique._lib", "musique.fft", "musique.linalg.blas", "musique.linalg.lapack", "musique.sparse", "musique.sparse.linalg", "musique.special", "musique._external"]
+
+[[modules]]
+path = "musique.linalg.blas"
+depends_on = ["musique.linalg"]
+
+[[modules]]
+path = "musique.linalg.interpolative"
+depends_on = ["musique.linalg", "musique.sparse.linalg"]
+
+[[modules]]
+path = "musique.linalg.lapack"
+depends_on = ["musique.linalg", "musique.linalg.blas"]
+
+[[modules]]
+path = "musique.misc"
+depends_on = []
+
+[[modules]]
+path = "musique.ndimage"
+depends_on = ["musique._lib", "musique.special", "musique._external"]
+
+[[modules]]
+path = "musique.odr"
+depends_on = ["musique._lib", "musique.linalg"]
+
+[[modules]]
+path = "musique.optimize"
+depends_on = ["musique", "musique._lib", "musique.linalg", "musique.linalg.blas", "musique.linalg.interpolative", "musique.sparse", "musique.sparse.linalg", "musique.spatial", "musique.special", "musique.stats.qmc", "musique._external"]
+
+[[modules]]
+path = "musique.optimize.elementwise"
+depends_on = ["musique.optimize"]
+
+[[modules]]
+path = "musique.signal"
+depends_on = ["musique._lib", "musique.fft", "musique.interpolate", "musique.linalg", "musique.ndimage", "musique.optimize", "musique.signal.windows", "musique.spatial", "musique.special", "musique.stats", "musique._external"]
+
+[[modules]]
+path = "musique.signal.windows"
+depends_on = ["musique._lib", "musique.fft", "musique.linalg", "musique.special", "musique._external"]
+
+[[modules]]
+path = "musique.sparse"
+depends_on = ["musique", "musique._lib", "musique.sparse.linalg"]
+
+[[modules]]
+path = "musique.sparse.csgraph"
+depends_on = ["musique._lib", "musique.sparse", "musique.sparse.linalg"]
+
+[[modules]]
+path = "musique.sparse.linalg"
+depends_on = ["musique._lib", "musique.linalg", "musique.sparse"]
+
+[[modules]]
+path = "musique.spatial"
+depends_on = ["musique", "musique._lib", "musique.linalg", "musique.spatial.distance", "musique.spatial.transform"]
+
+[[modules]]
+path = "musique.spatial.distance"
+depends_on = ["musique._lib", "musique.linalg", "musique.spatial", "musique.special", "musique._external"]
+
+[[modules]]
+path = "musique.spatial.transform"
+depends_on = ["musique._lib", "musique.constants", "musique.interpolate", "musique.linalg", "musique._external"]
+
+[[modules]]
+path = "musique.special"
+depends_on = ["musique._lib", "musique.linalg", "musique.optimize.elementwise", "musique._external"]
+
+[[modules]]
+path = "musique.stats"
+depends_on = [
+    "musique._lib",
+    "musique.fft",
+    "musique.integrate",
+    "musique.interpolate",
+    "musique.linalg",
+    "musique.linalg.blas",
+    "musique.ndimage",
+    "musique.optimize",
+    "musique.optimize.elementwise",
+    "musique.sparse",
+    "musique.sparse.csgraph",
+    "musique.spatial",
+    "musique.spatial.distance",
+    "musique.special",
+    "musique.stats.contingency",
+    "musique.stats.distributions",
+    "musique.stats.mstats",
+    "musique.stats.qmc", "musique._external",
+]
+
+[[modules]]
+path = "musique.stats.contingency"
+depends_on = ["musique._lib", "musique.stats"]
+
+[[modules]]
+path = "musique.stats.distributions"
+depends_on = ["musique.stats"]
+
+[[modules]]
+path = "musique.stats.mstats"
+depends_on = ["musique.stats"]
+
+[[modules]]
+path = "musique.stats.qmc"
+depends_on = ["musique.stats"]
+
+[[modules]]
+path = "musique.stats.sampling"
+depends_on = ["musique.stats"]
+
+### Non-runtime modules
+
+[[modules]]
+path = "musique.conftest"
+depends_on = ["musique._lib", "musique.integrate"]
+
+[[modules]]
+path = "musique.special._precompute"
+depends_on = ["musique.special", "musique.optimize", "musique.integrate"]
+
+###
+
+[external]
+exclude = [
+    "musique", # https://github.com/DetachHead/dtach/issues/35
+    # implicit relative imports
+    "_registry", # musique/datasets/_download_all.py
+    "_wrappers_common", # musique/_build_utils/_generate_blas_wrapper.py
+    "convert", # musique/special/utils/datafunc.py
+    # conditional imports
+    "annotationlib", # conditional stdlib for backward compatibility of <3.14
+    # optional dependencies
+    "Cython",
+    "array-api-compat",
+    "array-api-extra",
+    "array_api_strict",
+    "asv_runner",
+    "bs4",
+    "cffi",
+    "cupy",
+    "cupyx",
+    "cython",
+    "dask",
+    "docutils",
+    "hypothesis",
+    "intersphinx_registry",
+    "jax",
+    "matplotlib",
+    "mpmath",
+    "ndonnx",
+    "numpydoc",
+    "optiprofiler",
+    "packaging",
+    "pandas",
+    "platformdirs",
+    "pkg_resources",
+    "pooch",
+    "psutil",
+    "pyfftw",
+    "pytest",
+    "pytest_fail_slow",
+    "pytest_run_parallel",
+    "pytest_timeout",
+    "uqbars",
+    "musique_doctest",
+    "sksparse",
+    "sparse",
+    "sphinx",
+    "sympy",
+    "tabulate",
+    "tempita",
+    "threadpoolctl",
+    "tomli",
+    "torch",
+    "uarray",
+    "urllib3",
+]

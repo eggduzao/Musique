@@ -1,8 +1,0 @@
-Databases (in order): base1 base2
-
-Hamming:
-             	base1        	base2        	Random       
-base1        	72.22% 7.86%	55.56% 31.43%	76.11% 15.92%
-base2        	55.56% 31.43%	66.67% 13.61%	75.56% 14.1%
-Random       	76.11% 15.92%	75.56% 14.1%	77.04% 16.21%
-

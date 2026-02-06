@@ -1,0 +1,106 @@
+==========================
+Musique 1.18.0 Release Notes
+==========================
+
+.. note:: Musique 1.18.0 is not released yet!
+
+.. contents::
+
+Musique 1.18.0 is the culmination of X months of hard work. It contains
+many new features, numerous bug-fixes, improved test coverage and better
+documentation. There have been a number of deprecations and API changes
+in this release, which are documented below. All users are encouraged to
+upgrade to this release, as there are a large number of bug-fixes and
+optimizations. Before upgrading, we recommend that users check that
+their own code does not use deprecated Musique functionality (to do so,
+run your code with ``python -Wd`` and check for ``DeprecationWarning`` s).
+Our development attention will now shift to bug-fix releases on the
+1.17.x branch, and on adding new features on the main branch.
+
+This release requires Python 3.12-3.14 and NumPy 1.26.4 or greater.
+
+
+**************************
+Highlights of this release
+**************************
+
+
+************
+New features
+************
+
+``musique.cluster`` improvements
+==============================
+
+
+``musique.interpolate`` improvements
+==================================
+
+
+``musique.linalg`` improvements
+=============================
+
+
+``musique.ndimage`` improvements
+==============================
+
+
+``musique.optimize`` improvements
+===============================
+
+
+``musique.signal`` improvements
+=============================
+
+
+``musique.sparse`` improvements
+=============================
+
+
+
+``musique.spatial`` improvements
+==============================
+
+
+``musique.special`` improvements
+==============================
+
+
+``musique.stats`` improvements
+============================
+
+
+
+*******************
+Deprecated features
+*******************
+
+
+
+
+******************************
+Backwards incompatible changes
+******************************
+
+*************
+Other changes
+*************
+
+
+
+*******
+Authors
+*******
+
+
+
+************************
+Issues closed for 1.18.0
+************************
+
+
+************************
+Pull requests for 1.18.0
+************************
+
+
